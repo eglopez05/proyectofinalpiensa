@@ -1,0 +1,293 @@
+/*==================================================
+                NAVBAR
+==================================================*/
+
+header{
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    transition: .4s ease;
+
+}
+
+/* Clase que agregaremos con JavaScript */
+
+header.scrolled{
+
+    background: rgba(255,255,255,.75);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+                CONTENEDOR
+==================================================*/
+
+.navbar{
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    height: 85px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+/*==================================================
+                LOGO
+==================================================*/
+
+.logo{
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    color: var(--primary);
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+
+}
+
+.logo:hover{
+
+    transform: scale(1.08);
+
+    color: var(--primary-dark);
+
+}
+
+/*==================================================
+                MENÚ
+==================================================*/
+
+.menu{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+/*==================================================
+                LINKS
+==================================================*/
+
+.menu li a{
+
+    position: relative;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    color: var(--text);
+
+    transition: .3s;
+
+}
+
+/* Línea inferior */
+
+.menu li a::after{
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 3px;
+
+    border-radius: 50px;
+
+    background: var(--primary);
+
+    transition: .35s;
+
+}
+
+.menu li a:hover{
+
+    color: var(--primary);
+
+}
+
+.menu li a:hover::after{
+
+    width: 100%;
+
+}
+
+/*==================================================
+                LINK ACTIVO
+==================================================*/
+
+.menu li a.active{
+
+    color: var(--primary);
+
+}
+
+.menu li a.active::after{
+
+    width: 100%;
+
+}
+
+/*==================================================
+            BOTÓN LOGIN
+==================================================*/
+
+.login-btn{
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #67c7ff
+    );
+
+    color: white !important;
+
+    padding: 12px 25px;
+
+    border-radius: 50px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: .35s;
+
+}
+
+/* Quitar línea */
+
+.login-btn::after{
+
+    display: none;
+
+}
+
+.login-btn:hover{
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+
+}
+
+/*==================================================
+            MENU HAMBURGUESA
+==================================================*/
+
+.menu-icon{
+
+    display: none;
+
+    font-size: 1.7rem;
+
+    color: var(--primary);
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.menu-icon:hover{
+
+    transform: rotate(90deg);
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:990px){
+
+    .menu{
+
+        position: absolute;
+
+        top: 85px;
+
+        left: -100%;
+
+        width: 100%;
+
+        background: rgba(255,255,255,.96);
+
+        backdrop-filter: blur(20px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 40px 0;
+
+        transition: .4s;
+
+        box-shadow: var(--shadow);
+
+    }
+
+    .menu.active{
+
+        left: 0;
+
+    }
+
+    .menu-icon{
+
+        display: block;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .navbar{
+
+        height: 75px;
+
+    }
+
+    .logo{
+
+        font-size: 1.7rem;
+
+    }
+
+}

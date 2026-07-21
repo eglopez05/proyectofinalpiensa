@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ITS | Juego Físico</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/juego.css">
+
+</head>
+
+<body>
+
+<!--================ NAVBAR =================-->
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+
+ITS
+
+</a>
+
+<ul class="menu">
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="estadisticas.html">Estadísticas</a></li>
+
+<li><a href="juego.html" class="active">Juego Físico</a></li>
+
+<li><a href="soluciones.html">Soluciones</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+<li>
+
+<a href="login.html"
+class="login-btn">
+
+Iniciar Sesión
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="menu-icon">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<!--================ HERO =================-->
+
+<section class="juego-hero">
+
+<div class="hero-info">
+
+<span>
+
+Juego Educativo
+
+</span>
+
+<h1>
+
+Ruta hacia una <br>
+
+Infancia Feliz
+
+</h1>
+
+<p>
+
+Un juego de mesa educativo que enseña a niños, familias y docentes sobre los derechos de la niñez, la importancia de la educación y la prevención del trabajo infantil mediante retos, decisiones y reflexión.
+
+</p>
+
+<div class="buttons">
+
+<a href="#tablero" class="btn">
+
+Ver Tablero
+
+</a>
+
+<a href="#reglas" class="btn-outline">
+
+Cómo Jugar
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-img">
+
+<img src="img/juego/tablero.png"
+alt="Tablero del juego">
+
+</div>
+
+</section>
+
+<!--================ SOBRE =================-->
+
+<section class="sobre-juego">
+
+<div class="title">
+
+<h2>
+
+¿Qué es Ruta hacia una Infancia Feliz?
+
+</h2>
+
+<p>
+
+Este juego fue diseñado para generar conciencia sobre el trabajo infantil y la mendicidad en la ciudad de Cuenca mediante una experiencia dinámica donde cada decisión influye en el recorrido del jugador.
+
+</p>
+
+</div>
+
+</section>
+
+<!--================ COMPONENTES =================-->
+
+<section class="componentes">
+
+<div class="title">
+
+<h2>
+
+Componentes del Juego
+
+</h2>
+
+<p>
+
+Todo lo necesario para vivir una experiencia divertida y educativa.
+
+</p>
+
+</div>
+
+<div class="componentes-grid">
+
+<div class="card">
+
+<i class="fas fa-map"></i>
+
+<h3>
+
+Tablero
+
+</h3>
+
+<p>
+
+Un recorrido lleno de decisiones, retos y aprendizajes.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-layer-group"></i>
+
+<h3>
+
+Cartas
+
+</h3>
+
+<p>
+
+Cartas clasificadas por colores que representan distintas situaciones.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-dice"></i>
+
+<h3>
+
+Dado
+
+</h3>
+
+<p>
+
+Define el avance de cada jugador durante la partida.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-child"></i>
+
+<h3>
+
+Personajes
+
+</h3>
+
+<p>
+
+Cada participante elige un personaje para iniciar la aventura.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ TABLERO =================-->
+
+<section id="tablero" class="tablero">
+
+<div class="title">
+
+<h2>
+
+Explora el Tablero
+
+</h2>
+
+<p>
+
+Cada casilla representa una experiencia relacionada con la protección de los derechos de la niñez.
+
+</p>
+
+</div>
+
+<div class="tablero-img">
+
+<img src="img/juego/tablero.png"
+alt="Tablero">
+
+</div>
+
+</section>
+<!--================ TIPOS DE CARTAS =================-->
+
+<section class="cartas">
+
+    <div class="title">
+
+        <h2>Tipos de Cartas</h2>
+
+        <p>
+
+            Haz clic sobre una categoría para conocer las cartas del juego.
+
+        </p>
+
+    </div>
+
+    <div class="cartas-grid">
+
+        <div class="tipo-carta" onclick="abrirGaleria('decision')">
+
+            <img src="img/juego/cartas/decision1.png" alt="Carta Decisión">
+
+            <h3>🟠 Decisión</h3>
+
+            <p>Toma la mejor decisión para continuar.</p>
+
+        </div>
+
+        <div class="tipo-carta" onclick="abrirGaleria('ayuda')">
+
+            <img src="img/juego/cartas/ayuda1.png" alt="Carta Ayuda">
+
+            <h3>🔵 Ayuda</h3>
+
+            <p>Recibe apoyo para seguir avanzando.</p>
+
+        </div>
+
+        <div class="tipo-carta" onclick="abrirGaleria('reto')">
+
+            <img src="img/juego/cartas/reto1.png" alt="Carta Reto">
+
+            <h3>🟡 Reto</h3>
+
+            <p>Supera un desafío durante el recorrido.</p>
+
+        </div>
+
+        <div class="tipo-carta" onclick="abrirGaleria('consecuencia')">
+
+            <img src="img/juego/cartas/consecuencia1.png" alt="Carta Consecuencia">
+
+            <h3>🔴 Consecuencia</h3>
+
+            <p>Aprende de una mala decisión.</p>
+
+        </div>
+
+        <div class="tipo-carta" onclick="abrirGaleria('reflexion')">
+
+            <img src="img/juego/cartas/reflexion1.png" alt="Carta Reflexión">
+
+            <h3>🟢 Reflexión</h3>
+
+            <p>Piensa y aprende antes de continuar.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ PERSONAJES =================-->
+
+<section class="personajes">
+
+    <div class="title">
+
+        <h2>Personajes del Juego</h2>
+
+        <p>
+
+            Cada jugador elige un personaje para comenzar su aventura.
+
+        </p>
+
+    </div>
+
+    <div class="personajes-grid">
+
+        <div class="card">
+
+            <img src="img/juego/personajes/sofia.png" alt="Sofía">
+
+            <h3>Sofía</h3>
+
+            <p>Sueña con ser doctora y ayudar a los demás.</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/juego/personajes/mateo.png" alt="Mateo">
+
+            <h3>Mateo</h3>
+
+            <p>Le apasiona construir un mejor futuro.</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/juego/personajes/valentina.png" alt="Valentina">
+
+            <h3>Valentina</h3>
+
+            <p>Quiere enseñar y proteger los derechos de los niños.</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/juego/personajes/daniel.png" alt="Daniel">
+
+            <h3>Daniel</h3>
+
+            <p>Le encanta aprender y trabajar en equipo.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ REGLAS =================-->
+
+<section id="reglas" class="reglas">
+
+    <div class="title">
+
+        <h2>¿Cómo se juega?</h2>
+
+    </div>
+
+    <div class="reglas-grid">
+
+        <div class="card">
+
+            <i class="fas fa-users"></i>
+
+            <h3>1</h3>
+
+            <p>Cada jugador elige un personaje.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-dice"></i>
+
+            <h3>2</h3>
+
+            <p>Lanza el dado y avanza según el resultado.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-question-circle"></i>
+
+            <h3>3</h3>
+
+            <p>Lee la carta correspondiente a la casilla.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-trophy"></i>
+
+            <h3>4</h3>
+
+            <p>Gana quien llegue primero a la meta.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ BENEFICIOS =================-->
+
+<section class="beneficios">
+
+    <div class="title">
+
+        <h2>¿Qué aprenderás?</h2>
+
+    </div>
+
+    <div class="componentes-grid">
+
+        <div class="card">
+
+            <i class="fas fa-book-open"></i>
+
+            <h3>Conocimiento</h3>
+
+            <p>Aprende sobre los derechos de la niñez.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-heart"></i>
+
+            <h3>Empatía</h3>
+
+            <p>Comprende la realidad de muchos niños.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-comments"></i>
+
+            <h3>Trabajo en Equipo</h3>
+
+            <p>Comparte y reflexiona con otros jugadores.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-lightbulb"></i>
+
+            <h3>Reflexión</h3>
+
+            <p>Cada decisión deja una enseñanza.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ CTA =================-->
+
+<section class="cta">
+
+    <h2>
+
+        ¡Conoce más sobre esta problemática!
+
+    </h2>
+
+    <p>
+
+        Explora las estadísticas y descubre cómo puedes contribuir a construir una infancia libre de trabajo infantil.
+
+    </p>
+
+    <a href="estadisticas.html" class="btn">
+
+        Ver Estadísticas
+
+    </a>
+
+</section>
+
+<!--================ FOOTER =================-->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <h2>ITS</h2>
+
+            <p>
+
+                Proyecto PIENSA 2026
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Navegación</h3>
+
+            <ul>
+
+                <li><a href="index.html">Inicio</a></li>
+
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+
+                <li><a href="juego.html">Juego</a></li>
+
+                <li><a href="soluciones.html">Soluciones</a></li>
+
+                <li><a href="contacto.html">Contacto</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 ITS | Proyecto PIENSA
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!--================ MODAL DE CARTAS =================-->
+
+<div class="modal" id="modalCartas">
+
+    <span class="cerrar" onclick="cerrarGaleria()">&times;</span>
+
+    <img id="imagenCarta" src="" alt="Carta">
+
+    <div class="controles">
+
+        <button onclick="anterior()">❮</button>
+
+        <button onclick="siguiente()">❯</button>
+
+    </div>
+
+</div>
+
+<!--================ SCRIPTS =================-->
+
+<script src="js/app.js"></script>
+
+<script src="js/juego.js"></script>
+
+</body>
+
+</html>

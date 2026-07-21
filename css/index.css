@@ -1,0 +1,750 @@
+/*==================================================
+                HERO
+==================================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+    padding:160px 10% 100px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(236,248,255,.95),
+        rgba(255,255,255,.95)
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/*=========================================
+        CÍRCULOS DECORATIVOS
+=========================================*/
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    background:#dff4ff;
+
+    border-radius:50%;
+
+    top:-220px;
+
+    right:-150px;
+
+    opacity:.8;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:#d7ffe7;
+
+    border-radius:50%;
+
+    bottom:-120px;
+
+    left:-120px;
+
+}
+
+/*=========================================
+            TEXTO
+=========================================*/
+
+.hero-content{
+
+    flex:1;
+
+    z-index:2;
+
+}
+
+.subtitle{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    background:#dff3ff;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    color:var(--text);
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+    max-width:650px;
+
+    font-size:1.1rem;
+
+    margin-bottom:40px;
+
+}
+
+/*=========================================
+            BOTONES
+=========================================*/
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/*=========================================
+            IMAGEN
+=========================================*/
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:600px;
+
+    animation:floatImage 5s ease-in-out infinite;
+
+    filter:drop-shadow(0 25px 40px rgba(0,0,0,.18));
+
+}
+
+/*=========================================
+        ANIMACIÓN IMAGEN
+=========================================*/
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        TARJETAS FLOTANTES
+=========================================*/
+
+.hero-image::before{
+
+    content:"100% Educación";
+
+    position:absolute;
+
+    top:70px;
+
+    left:-10px;
+
+    background:white;
+
+    padding:18px 22px;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+    font-weight:600;
+
+    color:var(--primary);
+
+    animation:floatCard 4s ease-in-out infinite;
+
+}
+
+.hero-image::after{
+
+    content:"Infancia Segura";
+
+    position:absolute;
+
+    bottom:80px;
+
+    right:-20px;
+
+    background:white;
+
+    padding:18px 22px;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        INFORMACIÓN
+=========================================*/
+
+.info{
+
+    background:white;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.card{
+
+    text-align:center;
+
+}
+
+.card i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.card h3{
+
+    margin-bottom:18px;
+
+}
+
+/*=========================================
+            OBJETIVOS
+=========================================*/
+
+.objetivos{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:70px;
+
+    align-items:center;
+
+    background:var(--section);
+
+}
+
+.left img{
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.right h2{
+
+    margin-bottom:25px;
+
+}
+
+.right p{
+
+    margin-bottom:30px;
+
+}
+
+.right ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.right li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-weight:500;
+
+}
+
+.right i{
+
+    color:var(--secondary);
+
+    font-size:22px;
+
+}
+
+/*=========================================
+        PREVIEW
+=========================================*/
+
+.preview{
+
+    background:white;
+
+    text-align:center;
+
+}
+
+.preview-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.preview-card{
+
+    background:var(--section);
+
+    padding:45px 25px;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+}
+
+.preview-card:hover{
+
+    transform:translateY(-12px);
+
+    background:var(--primary);
+
+    color:white;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.preview-card:hover i{
+
+    color:white;
+
+}
+
+.preview-card i{
+
+    font-size:60px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.preview-card h3{
+
+    font-size:1.3rem;
+
+}
+
+/*=========================================
+            FOOTER
+=========================================*/
+
+footer{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #62c5ff
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+footer h2{
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:white;
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:1100px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-content p{
+
+margin:auto auto 40px;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.objetivos{
+
+grid-template-columns:1fr;
+
+}
+
+.preview-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.hero-content h1{
+
+font-size:2.7rem;
+
+}
+
+.preview-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-image::before,
+.hero-image::after{
+
+display:none;
+
+}
+
+}
+/*==================================================
+                LOADER
+==================================================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:.8s;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-logo{
+
+    width:120px;
+
+    height:120px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+    margin:auto;
+
+    animation:pulse 1.6s infinite;
+
+}
+
+.loader-spinner{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:5px solid #d8ecff;
+
+    border-top:5px solid var(--primary);
+
+    margin:30px auto;
+
+    animation:spin .8s linear infinite;
+
+}
+
+.loader-content p{
+
+    font-weight:500;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================================
+            BOTON SUBIR
+==================================================*/
+
+#top{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:58px;
+
+    height:58px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+#top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#top:hover{
+
+    transform:translateY(-8px);
+
+}
+
+#top i{
+
+    font-size:20px;
+
+}
